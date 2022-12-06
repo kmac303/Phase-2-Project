@@ -30,7 +30,7 @@ function App() {
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/addvenue">
+          <Route path="/new">
             <NewVenueForm />
           </Route>
         </Switch>

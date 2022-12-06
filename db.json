@@ -5,56 +5,56 @@
       "description": "The home of the Denver Broncos, this football stadium can host up to 60,000 concert-goers.",
       "location": "Denver,CO",
       "image": "images/EF.jpeg",
-      "id": 3
+      "id": 1
     },
     {
       "name": "Coors Field",
       "description": "The home of the Colorado Rockies, this baseball stadium can host up to 50,000 concert-goers.",
       "location": "Denver,CO",
       "image": "images/CF.jpeg",
-      "id": 1
+      "id": 2
     },
     {
       "name": "Fiddler's Green Amphitheatre",
       "description": "The largest outdoor amphitheatre in the Denver metropolitan area, with a capacity of 18,000 people.",
       "location": "Greenwood Village, CO",
       "image": "images/FG.jpeg",
-      "id": 4
+      "id": 3
     },
     {
       "name": "Red Rocks Amphitheatre",
       "description": "Forming over 200 million years, Red Rocks is the only naturally-occurring, acoustically perfect amphitheater in the world, with a capacity of 10,000 people.",
       "location": "Morrison, CO",
       "image": "images/RR.jpeg",
-      "id": 8
+      "id": 4
     },
     {
       "name": "Levitt Pavilion",
       "description": "A 7,500 person outdoor concert venue, that offers a free concert series every year.",
       "location": "Denver, CO",
       "image": "images/LP.png",
-      "id": 6
+      "id": 5
     },
     {
       "name": "Dillon Amphitheater",
       "description": "A spectacular lakeside venue over-looking the majestic Rocky Mountains, with a capacity of 6,500 people",
       "location": "Dillon,CO",
       "image": "images/DA.jpeg",
-      "id": 2
+      "id": 6
     },
     {
       "name": "Gerald R. Ford Amphitheater",
       "description": "A spectacular, intimate venue that can host 2,565 guests.",
       "location": "Vail,CO",
       "image": "images/GFA.jpeg",
-      "id": 5
+      "id": 7
     },
     {
       "name": "Mishawaka Amphitheatre",
       "description": "A legendary 1,000 person music venue located next to the Poudre River.",
       "location": "Bellvue,CO",
       "image": "images/MWA.jpeg",
-      "id": 7
+      "id": 8
     }
   ]
 }

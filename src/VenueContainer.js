@@ -1,13 +1,16 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Search from "./Search";
 import VenueCard from "./VenueCard";
 
 function VenueContainer({venues, setVenues}) {
   const [search, setSearch] = useState("");
+  // const [venues, setVenues] = useState([]);
 
-  // function handleSearch(newSearch) {
-  //   setSearch(newSearch);
-  // }
+  useEffect(() => {
+    fetch("http://localhost:3000/venues")
+      .then((r) => r.json())
+      .then((venues) => setVenues(venues));
+  }, []);
 
       function handleDeleteVenue(id) {
         const updatedVenueArray = venues.filter(venue => venue.id !== id);

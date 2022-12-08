@@ -1,22 +1,17 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
-function NewVenueForm() {
+function NewVenueForm({setVenues}) {
     const [name, setName] = useState(""); 
     const [description, setDescription] = useState(""); 
     const [image, setImage] = useState(""); 
     const [location, setLocation] = useState(""); 
-    const [venues, setVenues] = useState([]);
     const history = useHistory();
 
     function handleSubmit(e) {
         e.preventDefault();
         const formData = ({name, location, description, image});
     
-        function handleAddVenue(newVenue) {
-            const updatedVenuesArray = [newVenue, ...venues];
-            setVenues(updatedVenuesArray);
-          }
 
     fetch("http://localhost:3000/venues", {
         method: "POST",
@@ -27,7 +22,7 @@ function NewVenueForm() {
     })
     .then((r) => r.json())
     .then((newVenue) => {
-        handleAddVenue(newVenue);
+        setVenues((venues) => [...venues, newVenue]);
         history.push("/")
     });
     

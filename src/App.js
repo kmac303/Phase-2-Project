@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Switch, Route} from "react-router-dom";
 import NavBar from './NavBar';
 import Header from './Header';
@@ -8,11 +8,16 @@ import NewVenueForm from './NewVenueForm';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [search, setSearch] = useState("");
 
-  function handleSearch(newSearch) {
-    setSearch(newSearch);
-  }
+  const [venues, setVenues] = useState([]);
+
+  useEffect(() => {
+      fetch("http://localhost:3000/venues")
+        .then((r) => r.json())
+        .then((venues) => setVenues(venues));
+    }, []);
+
+
 
   function handleDarkModeClick() {
     setIsDarkMode((isDarkMode) => !isDarkMode);
@@ -25,7 +30,7 @@ function App() {
       <Header isDarkMode={isDarkMode} onDarkModeClick={handleDarkModeClick}/>
         <Switch>
           <Route exact path="/">
-            <VenueContainer search={search} onSearch={handleSearch}/>
+            <VenueContainer venues={venues} setVenues={setVenues}/>
           </Route>
           <Route path="/about">
             <About />

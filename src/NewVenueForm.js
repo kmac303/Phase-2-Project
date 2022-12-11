@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
 function NewVenueForm() {
+    const [formData, setFormData] = useState({
+        
+
+    })
     const [name, setName] = useState(""); 
     const [venues, setVenues] = useState([]);
     const [description, setDescription] = useState(""); 

@@ -27,7 +27,7 @@ function App() {
             <About />
           </Route>
           <Route path="/new">
-            <NewVenueForm />
+            <NewVenueForm venues={venues} setVenues={setVenues}/>
           </Route>
         </Switch>
     </div>

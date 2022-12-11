@@ -10,14 +10,6 @@ function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [venues, setVenues] = useState([]);
 
-  // useEffect(() => {
-  //     fetch("http://localhost:3000/venues")
-  //       .then((r) => r.json())
-  //       .then((venues) => setVenues(venues));
-  //   }, []);
-
-
-
   function handleDarkModeClick() {
     setIsDarkMode((isDarkMode) => !isDarkMode);
   }

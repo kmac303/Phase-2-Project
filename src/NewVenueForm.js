@@ -18,7 +18,6 @@ function NewVenueForm() {
             setVenues(updatedVenuesArray);
           }
     
-
     fetch("http://localhost:3000/venues", {
         method: "POST",
         headers: {

@@ -10,10 +10,21 @@ function VenueContainer({venues, setVenues}) {
       .then((r) => r.json())
       .then((venues) => setVenues(venues)); //call setVenues function passing in the array to update state
   }, []); 
+  
+      const filteredVenues = venues.filter(venue => {
+        return (venue.name.toLowerCase().includes(search.toLowerCase())) 
+        || venue.description.toLowerCase().includes(search.toLowerCase())
+        || venue.location.toLowerCase().includes(search.toLowerCase())
+      })
     
     return (
-      null
-     )
+        <div>
+          <Search onSearch={setSearch}/>
+            <ul className="cards">
+                {venueCards}
+            </ul>
+        </div>
+    )
 }
 
 export default VenueContainer;

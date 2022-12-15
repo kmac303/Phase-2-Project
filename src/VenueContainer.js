@@ -16,6 +16,13 @@ function VenueContainer({venues, setVenues}) {
         || venue.description.toLowerCase().includes(search.toLowerCase())
         || venue.location.toLowerCase().includes(search.toLowerCase())
       })
+      
+      const venueCards = filteredVenues.map(venueObj => {
+        return <VenueCard 
+          key={venueObj.id} 
+          venue={venueObj} 
+          onDeleteVenue={handleDeleteVenue}/>
+      })
     
     return (
         <div>

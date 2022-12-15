@@ -8,11 +8,16 @@ import NewVenueForm from './NewVenueForm';
 
 
 function App() {
+    const [isDarkMode, setIsDarkMode] = useState(false);
+  
+    function handleDarkModeClick() {
+    setIsDarkMode((isDarkMode) => !isDarkMode);
+  }
 
 
 
   return (
-  null
+      <Header isDarkMode={isDarkMode} onDarkModeClick={handleDarkModeClick}/>
   );
 }
 

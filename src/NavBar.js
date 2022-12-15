@@ -5,6 +5,10 @@ function NavBar() {
     return (
         <div className="navbar">
             <NavLink exact to="/">Home</NavLink>
+            <br/>
+            <NavLink to="/new">Add Venue</NavLink>
+            <br/>
+            <NavLink to="/about">About</NavLink>
         </div>
     )
 }

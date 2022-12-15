@@ -1,8 +1,20 @@
 import React from "react";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-
-function VenueCard() {
+//this component is for each individual venue
+function VenueCard({venue, onDeleteVenue}) {
+    //destructuring the venue object
+    const {image, description, name, location, id} = venue;
+//handles deleting a venue
+    function handleDelete() {
+        fetch(`http://localhost:3000/venues/${id}`, {
+            method: "DELETE"
+        })
+        .then((r) => r.json())
+        .then(() => {
+            onDeleteVenue(id);
+        })        
+    }
     return (
         <ul className="card">
             <Card style={{ width: '50rem' }}>
@@ -13,6 +25,7 @@ function VenueCard() {
                     <Card.Text>
                     {description}
                     </Card.Text>
+                    <Button variant="primary" onClick={handleDelete}>Delete</Button>
                 </Card.Body>
             </Card>
             <br/>
